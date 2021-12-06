@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 import { Card } from 'react-native-paper';
 import styled from 'styled-components';
 
@@ -8,15 +7,17 @@ import styled from 'styled-components';
  */
 
 const Title = styled.Text`
-  padding: 16px;
+  padding: ${(props) => props.theme.space[3]};
+  color: ${(props) => props.theme.colors.ui.primary};
+  font-size: ${(props) => props.theme.fontSizes.title};
 `;
 const RestaurantCard = styled(Card)`
-  background-color: white;
-  border-radius: 20px;
+  background-color: ${(props) => props.theme.colors.bg.primary};
+  border-radius: ${(props) => props.theme.space[3]};
 `;
 const RestaurantCover = styled(Card.Cover)`
-  padding: 10px;
-  background-color: white;
+  padding: ${(props) => props.theme.space[1]};
+  background-color: ${(props) => props.theme.colors.bg.primary}};
 `;
 
 /**/
