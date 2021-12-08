@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, StatusBar, Platform, SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
 import { Searchbar } from 'react-native-paper';
-import { RestautantInfoCard } from '../components/restaurant-info-card.component';
+
+import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
 
 /**
  * STYLES
@@ -12,7 +13,7 @@ const SafeAera = styled(SafeAreaView)`
   flex: 1;
 `;
 const StyledViewBar = styled.View`
-  padding: ${(props) => props.theme.space[1]};
+  padding: ${(props) => props.theme.space[2]};
   background: ${(props) => props.theme.colors.bg.primary};
 `;
 const StyledViewRest = styled.View`
@@ -32,7 +33,7 @@ export const RestaurantScreen = () => {
         <Searchbar placeholder={'search'} />
       </StyledViewBar>
       <StyledViewRest>
-        <RestautantInfoCard />
+        <RestaurantInfoCard />
       </StyledViewRest>
     </SafeAera>
   );
